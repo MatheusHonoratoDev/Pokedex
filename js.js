@@ -1,5 +1,8 @@
 function buscarPokemon() {
   var pokemonName = document.getElementById("pokemon-name").value;
+  pokemonName = pokemonName.toLowerCase();
+
+
   var request = new XMLHttpRequest();
   request.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemonName);
   request.onreadystatechange = function () {

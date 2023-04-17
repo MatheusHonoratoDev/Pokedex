@@ -83,3 +83,43 @@ button:hover {
   height: 135px;
   margin: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    body{
+        background-repeat: repeat;
+        justify-content: unset;
+    }
+    .borda {
+    width: 90%;
+    }
+    input {
+    width: 100%;
+    }
+    button {
+    width: 100%;
+    }
+    }
+    
+    @media only screen and (max-width: 480px) {
+    .borda {
+    width: 90%;
+    }
+    input {
+    width: 100%;
+    }
+    button {
+    width: 100%;
+    }
+    }
+    
+    @media only screen and (max-width: 320px) {
+    .borda {
+    width: 70%;
+    }
+    input {
+    width: 100%;
+    }
+    button {
+    width: 100%;
+    }
+    }
