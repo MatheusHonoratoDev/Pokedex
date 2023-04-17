@@ -85,41 +85,50 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    body{
-        background-repeat: repeat;
-        justify-content: unset;
-    }
-    .borda {
+  body {
+    background-repeat: repeat;
+    justify-content: unset;
+  }
+  .borda {
     width: 90%;
-    }
-    input {
+  }
+  input {
+    font-size: 16px;
+    max-height: 100%; 
+    max-width: 100%; 
+    -webkit-text-size-adjust: none;
+  }
+  button {
     width: 100%;
-    }
-    button {
-    width: 100%;
-    }
-    }
-    
-    @media only screen and (max-width: 480px) {
-    .borda {
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .borda {
     width: 90%;
-    }
-    input {
+  }
+  input {
+    font-size: 16px;
+    max-height: 100%; 
+    max-width: 100%; 
+    -webkit-text-size-adjust: none;
+  }
+  button {
     width: 100%;
-    }
-    button {
-    width: 100%;
-    }
-    }
-    
-    @media only screen and (max-width: 320px) {
-    .borda {
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .borda {
     width: 70%;
-    }
-    input {
+  }
+  input {
+    font-size: 16px;
+    max-height: 100%; 
+    max-width: 100%; 
+    -webkit-text-size-adjust: none;
+  }
+  button {
     width: 100%;
-    }
-    button {
-    width: 100%;
-    }
-    }
+  }
+}
