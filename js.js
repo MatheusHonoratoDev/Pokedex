@@ -2,13 +2,19 @@ function buscarPokemon() {
   var pokemonName = document.getElementById("pokemon-name").value;
   pokemonName = pokemonName.toLowerCase();
 
-
   var request = new XMLHttpRequest();
+  var spinner = document.getElementById("spinner");
+
+  document.getElementById("spinner").classList.remove("spinner-hidden");
+
   request.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemonName);
   request.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       var pokemonInfo = JSON.parse(this.responseText);
       var html = "";
+      document.getElementById("spinner").classList.add("spinner-hidden");
+      document.getElementById("fosco").classList.add("banana-none");
+
       html += "<h2 class='font123'>" + pokemonInfo.name + "</h2>";
       html +=
         "<img class='imgPokemon' src='" +
@@ -30,8 +36,11 @@ function buscarPokemon() {
       html += "<p><strong>Peso:</strong> " + pokemonInfo.weight + " kg</p>";
       document.getElementById("pokemon-info").innerHTML = html;
     } else if (this.readyState === 4) {
+      document.getElementById("spinner").classList.add("spinner-hidden");
+
       document.getElementById("pokemon-info").innerHTML =
         "<p>Pokemon não encontrado.</p>";
+
     }
   };
   request.send();
