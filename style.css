@@ -19,6 +19,7 @@ body {
     border-radius: 50%;
     animation: spinner 0.8s linear infinite;
     position: absolute;
+
   }
   
   .spinner-active {
@@ -128,6 +129,9 @@ button:hover {
   }
   button {
     width: 100%;
+  }
+  .spinner{
+    left: 150px;
   }
 }
 
