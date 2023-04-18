@@ -1,3 +1,10 @@
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    buscarPokemon();
+  }
+});
+
+
 function buscarPokemon() {
   var pokemonName = document.getElementById("pokemon-name").value;
   pokemonName = pokemonName.toLowerCase();
@@ -45,6 +52,8 @@ function buscarPokemon() {
   };
   request.send();
 }
+
+
 
 // function buscarBaga() {
 //   var bagaName = document.getElementById("baga-name").value;
